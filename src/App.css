@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+}
+
+.firstLine {
+  margin: 25px 10px;
+  font-style: italic;
+  font-weight: lighter;
+}
+
+.contacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  font-size: 30px;
+}
