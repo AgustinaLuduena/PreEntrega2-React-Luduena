@@ -10,16 +10,18 @@ h1 {
   margin: 15px;
 }
 
-.firstLine {
-  margin: 25px 10px;
-  font-style: italic;
-  font-weight: lighter;
-}
-
-.contacto {
+/*HomePage CSS*/
+.encabezado {
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin: 20px;
-  font-size: 30px;
+  text-align: center;
+  margin: 55px 10px;
+  font-size: 22px;
+  font-style: italic;
+}
+
+.buttonsConteiner{
+  display: flex;
+  justify-content: center;
+  margin: 50px;
 }

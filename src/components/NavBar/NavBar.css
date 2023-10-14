@@ -4,6 +4,11 @@
     display: flex;
     align-items: center;
   }
+
+  .nav-ul{
+    display: flex;
+    justify-content: center;
+  }
   
   .brand{
     font-size: 22px;

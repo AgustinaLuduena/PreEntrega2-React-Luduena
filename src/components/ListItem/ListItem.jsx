@@ -1,27 +1,33 @@
 import "./ListItem.css";
-import { useState, useEffect } from "react";
-import axios from "axios";
-import CardItem from "../CardItem/CardItem";
 import { Link } from "react-router-dom";
+import LinearProgress from '@mui/material/LinearProgress';
+
+//components
+import CardItem from "../CardItem/CardItem";
+//Hooks
+import useAxios from "../../hooks/useAxios";
+
+
 
 const ListItem = () => {
-  const [products, setProducts] = useState([]);
+  const url = "https://dummyjson.com/products";
+  const {data, loading} = useAxios(url);
 
-  useEffect(() => {
-    axios("https://dummyjson.com/products")
-      .then((res) => setProducts(res.data.products))
-  })
+  if (loading) return <LinearProgress/>
+
   return (
     <div className="Card-List">
-      {products.map((product) => {
+      {data 
+      ?  data.map((product) => {
           return (
-            <div key={product.id}> 
+            <div key={product.id} className= "CardItem"> 
                <Link to={`/detail/${product.id}`}>
-                <CardItem  product={product} />;
-              </Link>;
-          </div>
-          );
-      })}
+                <CardItem  product={product} />
+              </Link>
+            </div>);
+        })
+
+           : null} 
     </div>
   );
 };

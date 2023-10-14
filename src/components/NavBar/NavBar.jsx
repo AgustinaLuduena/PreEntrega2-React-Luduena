@@ -1,14 +1,17 @@
 import "./NavBar.css";
-import logo from "../../assets/logo1.png";
-
 import { Link } from "react-router-dom";
+//assets
+import logo from "../../assets/logo1.png";
+//components
+import CartWidget from "../CartWidget/CartWidget";
 
 const NavBar = () => {
   return (
-    <nav className="nav-container">
+    <div className="nav-container">
       <Link to="/">
         <img src={logo} alt="Logo TOKIO" style={{width: "65px", margin: "5px 14px"}} />
       </Link>
+      <nav>
       <ul className="nav-ul">
         <Link className="brand" to="/">
           TOKIO
@@ -19,14 +22,25 @@ const NavBar = () => {
         <Link className="li" to="/contact">
           Contacto
         </Link>
-        <Link className="li" to="/category/Indumentaria">
-          Indumentaria
+        <Link className="li" to="/category/smartphones">
+          Smartphones
         </Link>
-        <Link className="li" to="/category/Accesorios">
-          Accesorios
+        <Link className="li" to="/category/fragrances">
+          Fragancias
+        </Link>
+        <Link className="li" to="/category/skincare">
+          SkinCare
+        </Link>
+        <Link className="li" to="/category/groceries">
+          Comestibles
+        </Link>
+        <Link className="li">
+           <CartWidget/> 
         </Link>
       </ul>
     </nav>
+    </div>
+
   );
 };
 

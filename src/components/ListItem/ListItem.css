@@ -1,7 +1,11 @@
+.Card-List {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+}
 
-.Cards-List {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
+.Card-List .CardItem {
+  flex-basis: calc(20% - 10px);
+  max-width: calc(20% - 10px); 
+}

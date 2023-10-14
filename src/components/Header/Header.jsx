@@ -1,15 +1,20 @@
 import React from "react";
 import "./Header.css";
 
+//RRD
+import { Link } from "react-router-dom";
 
 
-const Header = () => {
+const Header = ({children}) => {
   return (
     <div>
         <section className='bgConteiner'>
             <div className='titleConteiner'>
-                <h1 className='title'>TOKIO</h1>
-                <h2 className='subtitle'>Indumentaria</h2>
+                <Link to={"/"} style={{textDecoration : "none", color : "black"}} >
+                  <h1 className='title'>TOKIO</h1>
+                  <h2 className='subtitle'>Tienda Online</h2>
+                  {children}
+                </Link>
             </div>
         </section>
     </div>
